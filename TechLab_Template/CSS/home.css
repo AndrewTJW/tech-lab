@@ -1,0 +1,147 @@
+/* styling for home section*/
+
+.home {
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.intro-text {
+  flex: 1;
+  padding-right: 40px;
+
+  & h1,
+  h2 {
+    padding: 20px 0 20px 0;
+  }
+
+  .tagline::before {
+    content: "";
+    background-color: var(--accent-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0.25em;
+    height: 100%;
+    z-index: 100;
+  }
+
+  & .tagline {
+    position: relative;
+    padding: 10px 10px;
+  }
+
+  & .cta-button {
+    margin: 40px 10px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 35%;
+
+    & .btn {
+      font-size: 1em;
+      padding: 10px;
+      border-radius: 1in;
+      text-decoration: none;
+      max-width: 13em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1em;
+      transition: 0.5s;
+    }
+
+    & .button-project {
+      position: relative;
+      width: 100%;
+      height: 3em;
+      background-color: var(--accent-color);
+      color: var(--button-font-color);
+      border: 2px solid var(--accent-color);
+      padding: 2px 20px 2px 40px;
+    }
+
+    & .button-project:hover {
+      padding-left: 0;
+    }
+
+    & .button-project .icon {
+      position: absolute;
+      width: 36px;
+      height: 36px;
+      left: 2px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      fill: var(--secondary-font-color);
+      background-color: var(--bg-color);
+      border-radius: 50%;
+      padding: 0.5em;
+      transition: 0.5s ease-in-out;
+    }
+
+    .button-project:hover .icon {
+      left: calc(100% - 42px);
+    }
+
+    .button-download svg {
+      transition: all 0.3s;
+      fill: var(--secondary-font-color);
+    }
+
+    .button-download {
+      border: 2px solid var(--tertiary-font-color);
+      background-color: var(--bg-color);
+      color: var(--secondary-font-color);
+      transition: all 0.3s;
+      box-shadow: 0px 0px 0 var(--secondary-font-color);
+    }
+
+    .button-download:hover {
+      transform: translate(-5px, -5px);
+      color: var(--accent-color);
+      border: 2px solid var(--accent-color);
+      box-shadow: 5px 5px 0 var(--accent-color);
+    }
+
+    .button-download:hover svg {
+      fill: var(--accent-color);
+    }
+  }
+}
+
+.img-holder {
+  position: relative;
+
+  & .liquid-shape {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 125%;
+        height: 125%;
+        transform: translate(-10%, -10%);
+        z-index: 0;
+  }
+
+  & .liquid-shape > path {
+    fill: var(--gradient-color);
+  }
+
+  & .img-box {
+    position: relative;
+    z-index: 1;
+  }
+
+  & .img-box img {
+    max-width: 400px;
+    height: auto;
+    border-radius: 50%;
+    filter: drop-shadow(7px 5px red);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .img-box img:hover {
+    transform: scale(1.05);
+  }
+}

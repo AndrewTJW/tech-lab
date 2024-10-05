@@ -1,0 +1,82 @@
+/* this will be all the styling elements in header section*/
+
+header {
+    display: flex;
+    position: fixed;
+    padding: 20px;
+    height: 10svh;
+    width: 100svw;
+    background-color: var(--header-color);
+    justify-content: space-around;
+    align-items: center;
+    z-index: 10;
+
+    & .logo-holder {
+        display: flex;
+        font-size: 1.5em;
+        gap: 1em;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    & img {
+        width: 6vmin /* 0.06 * 1080px */; height: auto;
+    }
+
+    & .logo-title {
+        background: var(--gradient-color);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+/*Select ing only the direct children of the nav element, with the id of 'menu'*/
+nav > #menu {
+    display: flex;
+    gap: 2em;
+    align-items: center;
+    list-style-type: none;
+}
+
+li > a {
+    text-decoration: none;
+    cursor: pointer;
+
+    & > span {
+        color: var(--secondary-font-color);
+    }
+}
+
+.scroll-link {
+    font-size: 0.8em;
+    background: linear-gradient(to right, #2ecc71, #208f4f , #1c7a44, #176639) no-repeat right bottom;
+    background-size: 0 4px;
+    transition: background-size 0.3s;
+
+    &:hover {
+        background-position: left bottom;
+        background-size: 100% 2px;
+    }
+}
+
+.active-link {
+    background-size: 100% 2px;
+    color: var(--accent-color);
+    font-size: 1em;
+}
+
+.button-contact {
+    color: var(--button-font-color);
+    background-color: var(--accent-color);
+    padding: 0.5em 1em;
+    font-size: 0.8em;
+    border-radius: 1in;
+    transition: 0.5s ease-in-out;
+
+    &:hover {
+        background-color: var(--accent-color);
+        color: var(--accent-color);
+        font-size: 1em;
+    }
+}
